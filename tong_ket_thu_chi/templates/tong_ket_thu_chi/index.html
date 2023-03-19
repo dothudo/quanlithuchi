@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Custom Calendar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Roboto:wght@400;500;600,700,800" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .container{
+    width: 100%;
+    height: 100vh;
+    background-color: #fcd1d1;;
+  }
+  
+  /* Calendar */
+  .calendar{
+    width: 60%;
+    height: 650px;
+    background: rgb(255, 255, 255);
+
+  }
+  .calendar .month{
+    width: 100%;
+    height: 15%;
+    padding: 20px 30px;
+
+    background-image: linear-gradient(
+      90deg,
+      #ff9a8b 0%,
+      #ff6a88 55%,
+      #ff99ac 100%
+    );
+    justify-content: space-between !important;
+    text-align: center;
+  }
+  .month h1{
+    text-transform: uppercase;
+    font-size: 30px;
+  }
+  .month p{
+    font-weight: 300;
+    color: rgba(0,0,0,0.8)
+  }
+  .weekdays{
+    background: #a5aaf3;
+    width: 100%;
+    padding: 10px;
+    height: 5%;
+    padding: 0;
+  }
+  .weekdays div{
+    width: calc(100% / 7);
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0 5px;
+    transition: 0.2s;
+  }
+  .days{
+    width: 100%;
+    height: 70%;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 0;
+  }
+  .days li{
+    width: calc(100% / 7);
+    height: calc(100% / 7);
+    text-align: center;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+  }
+  .days .previous-day{
+    color: rgba(255, 0, 0, 0.35)
+  }
+  .days .next-days{
+    color: rgba(255, 0, 0, 0.35)
+  }
+  .days .today{
+    background: #ff0000;
+    cursor: pointer;
+    color: white;
+    border-radius: 50%;
+    transition: 0.2s;
+  }
+  /*hover di chuột qua phần tử */
+  .days .today:hover{
+    background: #12e72e;
+  }
+  .days li:not(.today):hover{
+    border-radius: 0;
+    border: 0.5px solid rgb(0, 255, 4);
+    background: rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+/*màu nền khi 1 phần tử được chọn và màu chữ*/
+ul li.checked {
+    background: #f9c7d9;
+    color: #000000;
+  }
+
+  .not {
+    background-color: rgb(119, 119, 119);
+    width: 100%;
+    height: 10%;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 0;
+  }
+  .not div{
+    color: white;
+    width: calc(100% / 3);
+    text-align: center;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+  }
+  .prev,
+  .next{
+    cursor: pointer;
+  }
+  
+
+</style>
+</head>
+<body>
+  <div class="container flex">
+    <div class="calendar">
+      <div class="month flex">
+        <div class="prev">
+          <i class="fas fa-chevron-left"></i>
+        </div>
+        <div class="content">
+          <h1></h1>
+          <p></p>
+        </div>
+        <div class="next">
+          <i class="fas fa-chevron-right"></i>
+        </div>
+      </div>
+
+      <div class="weekdays flex">
+        <div>Hai</div>
+        <div>Ba</div>
+        <div>Tư</div>
+        <div>Năm</div>
+        <div>Sáu</div>
+        <div>Bảy</div>
+        <div>Chủ nhật</div>
+      </div>
+
+      <ul class="days flex">
+        <li class="previous-day">26</li>
+        <li class="previous-day">27</li>
+        <li class="previous-day">28</li>
+        <li class="previous-day">29</li>
+        <li class="previous-day">30</li>
+        <li class="previous-day">31</li>
+        <li class="">1</li>
+        <li class="today">11</li>
+        <li class="">31</li>
+        <li class="next-days">1</li>
+        <li class="next-days">2</li>
+        <li class="next-days">3</li>
+        <li class="next-days">4</li>
+        <li class="next-days">5</li>
+      </ul>
+
+      <div class="not flex">
+        <div class="a">Tổng thu</div>
+        <div class="a">Tổng chi</div>
+        <div class="a">Thu Chi</div>
+      </div>
+    </div>
+  </div>
+  <script>
+var date = new Date();
+
+var renderCalendar = () => {
+  date.setDate(1);
+
+  var monthDays = document.querySelector(".days");
+
+  var lastDay = new Date(
+    date.getFullYear(),
+    date.getMonth()+1,
+    0
+  ).getDate();
+
+  var prevLastDay = new Date(
+    date.getFullYear(),
+    date.getMonth(),
+    0
+  ).getDate();
+
+  var firstDayIndex = date.getDay();
+
+  var lastDayIndex = new Date(
+    date.getFullYear(),
+    date.getMonth() + 1,
+    0
+  ).getDay();
+
+  var nextDays = 7 - lastDayIndex - 1;
+
+  var months = [
+    "Tháng 1",
+    "Tháng 2",
+    "Tháng 3",
+    "Tháng 4",
+    "Tháng 5",
+    "Tháng 6",
+    "Tháng 7",
+    "Tháng 8",
+    "Tháng 9",
+    "Tháng 10",
+    "Tháng 11",
+    "Tháng 12",
+  ]
+
+  document.querySelector('.content h1').innerHTML = months[date.getMonth()];
+  document.querySelector('.content p').innerHTML = new Date().toDateString();
+
+  let days = "";
+
+  for (let x = firstDayIndex; x>0;x--){
+    days += `<li class="previous-day">${prevLastDay - x + 1}</li>`
+  }
+
+  for (let i = 1; i <= lastDay; i++){
+    if(i===new Date().getDate() && date.getMonth() === new Date().getMonth()){
+      days += `<li class="today">${i}</li>`
+    } else {
+      days += `<li class="">${i}</li>`
+    }
+  }
+
+  for(let j = 1; j <= nextDays; j++){
+    days += `<li class="next-days">${j}</li>`
+    monthDays.innerHTML = days;
+  }
+};
+
+document.querySelector('.prev').addEventListener('click', () => {
+  date.setMonth(date.getMonth() - 1);
+  renderCalendar();
+})
+
+document.querySelector('.next').addEventListener('click', () => {
+  date.setMonth(date.getMonth() + 1);
+  renderCalendar();
+})
+
+renderCalendar();
+
+
+// Add a "checked" symbol when clicking on a list item
+//đánh dấu các mục đã hoàn thành
+var list = document.querySelector('ul');//tìm phần tử đầu tiên trên trang có thẻ 'ul'
+list.addEventListener('click', function(ev)//gán sự kiện 'click' cho phần tử list,"ev" trong hàm này đại diện cho sự kiện được kích hoạt.
+{
+    if (ev.target.tagName === 'LI') {//phần tử đc nhấn có thẻ là "LI", mã sẽ được thực thi
+    //classList là một thuộc tính của phần tử HTML cho phép thêm, xóa hoặc kiểm tra sự tồn tại
+    //sẽ kiểm tra xem phần tử đang có lớp checked hay không
+    //checked dụng để xác định trạng thái của phần tử đó là được chọn hay không.
+        ev.target.classList.toggle('checked');
+}
+}, false);// false, sự kiện chỉ được kích hoạt trên phần tử được chọn
+
+
+  </script>
+</body>
+</html>
