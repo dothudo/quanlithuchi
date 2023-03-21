@@ -18,15 +18,5 @@ from django.urls import include, path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("background/", include("background.urls")),
-    path("sign_in/", include("sign_in.urls")),
-    path("sign_up/", include("sign_up.urls")),
-    path("Meun/", include("Meun.urls")),
-    path("tien_thu/", include("tien_thu.urls")),
-    path("tien_chi/", include("tien_chi.urls")),
-    path("tong_ket_thu_chi/", include("tong_ket_thu_chi.urls")),
-    path("bieu_do_thu/", include("bieu_do_thu.urls")),
-    path("bieu_do_chi/", include("bieu_do_chi.urls")),
-    path("nang_cap_vip/", include("nang_cap_vip.urls")),
-    path("", include("background.urls")),
+    path("", include("web.urls")),
 ]

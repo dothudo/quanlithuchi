@@ -33,16 +33,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'background',
-    'sign_in',
-    'sign_up',
-    'Meun',
-    'tien_thu',
-    'tien_chi',
-    'tong_ket_thu_chi',
-    'bieu_do_thu',
-    'bieu_do_chi',
-    'nang_cap_vip',
+    'web',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
