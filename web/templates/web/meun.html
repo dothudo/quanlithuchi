@@ -4,59 +4,83 @@
     <link rel="stylesheet" type="text/css" href="static/css/meun.css" />
 </head>
 <body>
-<div class="meun">
+<div class="home">
     <div class="profile">
         <div class="avatar">
-            <img src="static/Meun/img/meun.jpg" alt="">
+            <img src="static/image/avt.jpg" alt="">
         </div>
         <div class="name">
             <div class="specialize"><h2><center>Thông Tin Người Dùng</center></h2></div>
-            <ul class="contact">
-                <li>
+            <div class="contact">
+                <p>
                     <span>N</span> +...
-                </li>
-                <li>
+                </p>
+                <p>
                     <span>J</span> +..
-                </li>
-                <li>
+                </p>
+                <p>
                     <span>P</span> +...
-                </li>
+                </p>
             </ul>
         </div>
+
+        </div>
+        <ul>
+            <li class="dropdown">
+                <a class="dropbtn"><span>Cài đặt</span></a>
+                <div class="dropdown-content">
+                    <a href="#">Thông tin cá nhân</a>
+                    <a href="#">Cài đặt web</a>
+                    <a href="#">Đăng xuất </a>
+                </div>
+            </li>
+        </ul>
     </div>
     <div class="container">
         <div class="tien_thu">
-            <div class="img1">
-                <a href="{% url 'web:tien_thu' %}"><h1>Tiền Thu</h1></a>
+            <div class="img">
+                <a href="{% url 'web:tien_thu' %}">
+                    <img src="static/image/meun.jpg"  alt="" class="img-thumbnail img-avt" >
+                    <h2>Tiền Thu</h2></a>
             </div>
         </div>
         <div class="tien_chi">
-            <div class="img2">
-                <a href="{% url 'web:tien_chi' %}"><h1>Tiền Chi</h1></a>
+            <div class="img">
+                <a href="{% url 'web:tien_chi' %}">
+                    <img src="static/image/meun.jpg"  alt="" class="img-thumbnail img-avt" >
+                    <h2>Tiền Chi</h2></a>
             </div>
             
         </div>
         <div class="tong_ket_thu_chi">
-            <div class="img3">
-                <a href="{% url 'web:tong_ket_thu_chi' %}"><h1>Tổng Kết thu chi</h1></a>
+            <div class="img">
+                <a href="{% url 'web:tong_ket_thu_chi' %}">
+                    <img src="static/image/meun.jpg"  alt="" class="img-thumbnail img-avt" >
+                    <h2>Tổng Kết thu chi</h2></a>
             </div>
             
         </div>
         <div class="bieu_do_thu">
-            <div class="img4">
-                <a href="{% url 'web:bieu_do_chi' %}"><h1>Biểu đồ thu</h1></a>
+            <div class="img">
+                <a href="{% url 'web:bieu_do_chi' %}">
+                    <img src="static/image/meun.jpg"  alt="" class="img-thumbnail img-avt" >
+                    <h2>Biểu đồ thu</h2></a>
             </div>
             
         </div>
         <div class="bieu_do_chi">
-            <div class="img5">
-                <a href="{% url 'web:bieu_do_chi' %}"><h1>Biểu đồ chi</h1></a>
+            <div class="img">
+                <a href="{% url 'web:bieu_do_chi' %}">
+                    <img src="static/image/meun.jpg"  alt="" class="img-thumbnail img-avt" >
+                    <h2>Biểu đồ chi</h2></a>
             </div>
             
         </div>
         <div class="nang_cap_vip">
-            <div class="img6">
-                <a href="{% url 'web:nang_cap_vip' %}"><h1>Nâng cấp VIP</h1></a>
+            <div class="img">
+                <a href="{% url 'web:nang_cap_vip' %}">
+                    <img src="static/image/meun.jpg"  alt="" class="img-thumbnail img-avt" >
+                    <h2>Nâng cấp VIP</h2></a>
             </div>
         </div>
     </div>

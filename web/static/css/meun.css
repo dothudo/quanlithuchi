@@ -5,20 +5,19 @@ font-family: system-ui;
 width: 100%;
 margin: 0;
 }
-.meun{
+.home{
 margin-left: 5%;
 width:90%;
 box-shadow: 0 100px 10000px #49df41;
 position: relative;
 }
 .profile{
+height: 240px;
 background-color: #eabefe;
-margin:auto;
-padding:5px;
+width: 100%;
 display: grid;
-grid-template-columns: 25% 60%;
-column-gap: 5%; 
-row-gap: 5px;
+grid-template-columns: 23% 55% 5%;
+column-gap: 4%; 
 }
 .avatar img{
 width:200px;
@@ -31,6 +30,7 @@ display: flex;
 margin-left: 30%;
 align-items: center;
 }
+
 .name{
 padding-left: 10px;
 border-left:1px solid #000;
@@ -39,7 +39,7 @@ border-left:1px solid #000;
 margin:5px;
 font-weight: bold;
 letter-spacing: 3px;
-margin-bottom: 40px;
+margin-bottom: 10px;
 }
 .name .contact{
 padding:0;
@@ -56,160 +56,110 @@ border-radius: 50%;
 font-size: small;
 margin-right: 20px;
 }
-.name .contact li{
+.name .contact {
 padding:5px 0;
 transform: translate(-40px);
 background-color: #E9E7EA;
 }
 
+ul {
+    float: right;
+    margin-right: 0px;
+    height: 40px;
+    width: 100%;
+    list-style-type: none;
+    overflow: hidden;
+}
+li{float: left;}
+li a, .dropbtn{
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    text-align: center;
+    text-decoration: none;
+}
+li a:hover, .dropdown:hover .dropbtn{color: rgb(190, 5, 42);}
+li.dropdown {display: inline-block;}
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color:aliceblue;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgb(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a{
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align:left;
+}
+.dropdown-content a:hover{background-color: aliceblue;}
+.dropdown:hover .dropdown-content{display: block;}
+
 .container{
 background-color: #edcaff;
 margin:auto;
-padding:30px;
+padding:10px;
 display: grid;
 grid-template-columns: 20% 20% 20%;
-height: 450px;
+height: 470px;
 padding-left: 15%;
 column-gap: 10%; 
 align-items: center;
 }
 .tien_thu{
 height: 200px;
-background-color: #f86c6c;
 box-shadow: 0 100px 1000px #d70a0a;
 text-align: justify;
-}
-.img1 {
-height: 200px;
-padding-top: 50px;
 object-fit: cover;
 background-repeat: no-repeat;
-background-image: url("luong.jpg");
-background-size: 100%;
-
-}
-.img1 h1{
-margin-left: 10%;
-width: 80%;
-transform: translate(1px);
-transform: translate(0px);
-background-color: #E9E7EA;
-text-align: center;
-background-image: url("static/Meun/img/luong.jpg");
-background-size: 100%;
 }
 .tien_chi{
-height: 200px;
-background-color: #f86c6c;
-box-shadow: 0 100px 1000px #d70a0a;
-text-align: justify;
-}
-.img2 {
-height: 200px;
-padding-top: 50px;
-object-fit: cover;
-background-repeat: no-repeat;
-background-image: url("luong.jpg");
-background-size: 100%;
-
-}
-.img2 h1{
-margin-left: 10%;
-width: 80%;
-transform: translate(1px);
-transform: translate(0px);
-background-color: #E9E7EA;
-text-align: center;
+    height: 200px;
+    box-shadow: 0 100px 1000px #d70a0a;
+    text-align: justify;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
 .tong_ket_thu_chi{
-height: 200px;
-background-color: #f86c6c;
-box-shadow: 0 100px 1000px #d70a0a;
-text-align: justify;
+    height: 200px;
+    box-shadow: 0 100px 1000px #d70a0a;
+    text-align: justify;
+    object-fit: cover;
+    background-repeat: no-repeat;
 } 
-.img3 {
-height: 200px;
-padding-top: 50px;
-object-fit: cover;
-background-repeat: no-repeat;
-background-image: url("luong.jpg");
-background-size: 100%;
-
-}
-.img3 h1{
-margin-left: 10%;
-width: 80%;
-transform: translate(1px);
-transform: translate(0px);
-background-color: #E9E7EA;
-text-align: center;
-}
 .bieu_do_thu{
-height: 200px;
-background-color: #f86c6c;
-box-shadow: 0 100px 1000px #d70a0a;
-text-align: justify;
-}
-.img4 {
-height: 200px;
-padding-top: 50px;
-object-fit: cover;
-background-repeat: no-repeat;
-background-image: url("luong.jpg");
-background-size: 100%;
-
-}
-.img4 h1{
-margin-left: 10%;
-width: 80%;
-transform: translate(1px);
-transform: translate(0px);
-background-color: #E9E7EA;
-text-align: center;
+    height: 200px;
+    box-shadow: 0 100px 1000px #d70a0a;
+    text-align: justify;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
 .bieu_do_chi{
-height: 200px;
-background-color: #f86c6c;
-box-shadow: 0 100px 1000px #d70a0a;
-text-align: justify;
-}
-.img5 {
-height: 200px;
-padding-top: 50px;
-object-fit: cover;
-background-repeat: no-repeat;
-background-image: url("luong.jpg");
-background-size: 100%;
-
-}
-.img5 h1{
-margin-left: 10%;
-width: 80%;
-transform: translate(1px);
-transform: translate(0px);
-background-color: #E9E7EA;
-text-align: center;
+    height: 200px;
+    box-shadow: 0 100px 1000px #d70a0a;
+    text-align: justify;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
 .nang_cap_vip{
-height: 200px;
-background-color: #f86c6c;
-box-shadow: 0 100px 1000px #d70a0a;
-text-align: justify;
+    height: 200px;
+    box-shadow: 0 100px 1000px #d70a0a;
+    text-align: justify;
+    object-fit: cover;
+    background-repeat: no-repeat;
 }
-.img6 {
-height: 200px;
-padding-top: 50px;
-object-fit: cover;
-background-repeat: no-repeat;
-background-image: url("luong.jpg");
-background-size: 100%;
-
+.img-avt {
+    height: 170px;
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    object-fit: cover;
 }
-.img6 h1{
-margin-left: 10%;
-width: 80%;
-transform: translate(1px);
-transform: translate(0px);
-background-color: #E9E7EA;
+.img h2{
+height: 20px;
+margin-top: 0px;
+width: 100%;
 text-align: center;
 }

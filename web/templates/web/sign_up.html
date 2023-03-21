@@ -17,6 +17,7 @@
         <div class="noi-dung">
             <div class="form">
                 <h2>Trang Đăng kí</h2>
+
                 <form action="{% url 'web:sign_in' %}">
                     <div class="input-form">
                         <span>Họ Tên Người Dùng</span>
@@ -52,12 +53,15 @@
                         <p>Bạn đã Có Tài Khoản?  <a href="{% url 'web:sign_in' %}">Đăng Nhập</a></p>
                     </div>
                 </form>
+
                 <h3>Đăng kí Bằng Mạng Xã Hội</h3>
+
                 <ul class="icon-dang-nhap">
                     <li><i class="fa fa-facebook" aria-hidden="true"></i></li>
                     <li><i class="fa fa-google" aria-hidden="true"></i></li>
                     <li><i class="fa fa-twitter" aria-hidden="true"></i></li>
                 </ul>
+                
             </div>
         </div>
         <!--Kết Thúc Phần Nội Dung-->
