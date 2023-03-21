@@ -135,7 +135,7 @@ section .noi-dung .form .icon-dang-nhap li i{
         <div class="noi-dung">
             <div class="form">
                 <h2>Trang Đăng kí</h2>
-                <form action="{% url 'sign_in:index' %}">
+                <form action="{% url 'web:sign_in' %}">
                     <div class="input-form">
                         <span>Họ Tên Người Dùng</span>
                         <input type="text" name="">
@@ -167,7 +167,7 @@ section .noi-dung .form .icon-dang-nhap li i{
                         <input type="submit" value="Đăng Kí">
                     </div>
                     <div class="input-form">
-                        <p>Bạn đã Có Tài Khoản?  <a href="{% url 'sign_in:index' %}">Đăng Nhập</a></p>
+                        <p>Bạn đã Có Tài Khoản?  <a href="{% url 'web:sign_in' %}">Đăng Nhập</a></p>
                     </div>
                 </form>
                 <h3>Đăng kí Bằng Mạng Xã Hội</h3>

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" type="text/css" href="static/sign_in/css/style.css">
     <style>
-    body{
+body{
     background-color: #fcd1d1;
     font-family: system-ui;
 }
@@ -136,7 +136,7 @@ section .noi-dung .form .icon-dang-nhap li i{
         <div class="noi-dung">
             <div class="form">
                 <h2>Trang Đăng Nhập</h2>
-                <form action="{% url 'Meun:index' %}">
+                <form action="{% url 'web:meun' %}">
                     <div class="input-form">
                         <span>SDT Người Dùng</span>
                         <input type="text" name="">
@@ -149,10 +149,10 @@ section .noi-dung .form .icon-dang-nhap li i{
                         <label><input type="checkbox" name=""> Nhớ Đăng Nhập</label>
                     </div>
                     <div class="input-form">
-                        <a href="{% url 'Meun:index' %}"><input type="submit" value="Đăng Nhập"></a>
+                        <a><input type="submit" value="Đăng Nhập"></a>
                     </div>
                     <div class="input-form">
-                        <p>Bạn Chưa Có Tài Khoản?  <a href="{% url 'sign_up:index' %}">Đăng Ký</a></p>
+                        <p>Bạn Chưa Có Tài Khoản?  <a href="{% url 'web:sign_up' %}">Đăng Ký</a></p>
                     </div>
                 </form>
                 <h3>Đăng Nhập Bằng Mạng Xã Hội</h3>
