@@ -1,0 +1,18 @@
+<form action="{% url 'web:tien_chi' %}">
+    <h2>Tiền Thu</h2>
+    <div class="input-form">
+        <span>Thời gian</span>
+        <input type="datetime-local" name="">
+    </div>
+    <div class="input-form">
+        <span>Ghi Chú</span>
+        <input type="text" name="">
+    </div>
+    <div class="input-form">
+        <span>Số tiền</span>
+        <input type="text" name="">
+    </div>
+    <div class="input-form">
+        <a><input type="submit" value="Nhập khoản tiền thu"></a>
+    </div>
+</form>

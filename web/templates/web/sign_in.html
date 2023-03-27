@@ -18,14 +18,14 @@
             <div class="form">
                 <h2>Trang Đăng Nhập</h2>
 
-                <form action="{% url 'web:meun' %}">
+                <form action= "{% url 'web:meun' %}" onsubmit="return validate()">
                     <div class="input-form">
-                        <span>SDT Người Dùng</span>
-                        <input type="text" name="">
+                        <span for="username">SDT Người Dùng</span>
+                        <input type="text" id="username" name="">
                     </div>
                     <div class="input-form">
-                        <span>Mật Khẩu</span>
-                        <input type="password" name="">
+                        <span for="password">Mật Khẩu</span>
+                        <input type="password" id="password" name="">
                     </div>
                     <div class="nho-dang-nhap">
                         <label><input type="checkbox" name=""> Nhớ Đăng Nhập</label>
@@ -49,5 +49,6 @@
         </div>
         <!--Kết Thúc Phần Nội Dung-->
     </section>
+    <script src="static/js/sign_in.js"></script>
 </body>
 </html>
