@@ -2,81 +2,128 @@
 <html>
 <head>
   <link rel="stylesheet" type="text/css" href="static/css/nang_cap_vip.css" />
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
 </head>
 <body>
-<div class="meun flex">
-    <div class="vip">
-        <div class="note flex">
-            <h1><center>NÂNG CẤP VIP</center></h1>
-        </div>
-        <div class="container">
-            <div class="a1ngay">
-                <div class="img">
-                    <img src="static/image/nang_cap_vip.jpg"  alt="" class="img-thumbnail img-avt" >
-                    <h3 class="flex">Gói ngày :5000VND</h3>
-                </div>
-                
-            </div>
-            <div class="a1tuan">
-                <div class="img">
-                    <img src="static/image/nang_cap_vip.jpg"  alt="" class="img-thumbnail img-avt" >
-                    <h3 class="flex">Gói tuần :30000VND</h3>
-                </div>
-                
-            </div>
-            <div class="a1thang">
-                <div class="img">
-                    <img src="static/image/nang_cap_vip.jpg"  alt="" class="img-thumbnail img-avt" >
-                    <h3 class="flex">Gói tháng :110000VND</h3>
-                </div>
-                
-            </div>
-            <div class="a3thang">
-                <div class="img">
-                    <img src="static/image/nang_cap_vip.jpg"  alt="" class="img-thumbnail img-avt" >
-                    <h3 class="flex">Gói 3 tháng :300000VND</h3>
-                </div>
-                
-            </div>
-            <div class="a6thang">
-                <div class="img">
-                    <img src="static/image/nang_cap_vip.jpg"  alt="" class="img-thumbnail img-avt" >
-                    <h3 class="flex">Gói 6 tháng :550000VND</h3>
-                </div>
-                
-            </div>
-            <div class="a1nam">
-                <div class="img">
-                    <img src="static/image/nang_cap_vip.jpg"  alt="" class="img-thumbnail img-avt" > 
-                    <h3 class="flex">Gói năm :1100000VND</h3>
-                </div>
-                
-            </div>
-        </div>
-        <div class="modal-body ">
-            <div class="cart-row">
-                <span class="cart-item cart-header cart-column">Gói VIP</span>
-                <span class="cart-price cart-header cart-column">Giá</span>
-                <span class="cart-quantity cart-header cart-column">Số Lượng</span>
-            </div>
-            <div class="cart-items">
-                <div class="cart-row">
-                    <div class="cart-item cart-column">
-                        <span class="cart-item-title">1 tháng</span>
+    <div class="container">
+        <div class="center">
+            
+            <h2>PRODUCTS</h2>
+            <div class="list">
+                <div class="item" data-key="1">
+                    <div class="img">
+                        <img src="static/image/nang_cap_vip.jpg" alt="">
                     </div>
-                    <span class="cart-price cart-column">110000đ</span>
-                    <div class="cart-quantity cart-column">
-                        <input class="cart-quantity-input" type="number" value="1">
-                        <button class="btn btn-danger" type="button">Xóa</button>
+                    <div class="content">
+                        <div class="title">Gói ngày</div>
+                        <div class="des">
+                            ...............
+                        </div>
+                        <div class="price">5000VND</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(1)"><i class="fa-solid fa-trash-can"></i></button>
                     </div>
                 </div>
-                <div class="cart-total">
-                    <strong class="cart-total-title">Tổng Cộng:</strong>
-                    <span class="cart-total-price">250000VND</span>
+
+                <div class="item" data-key="2">
+                    <div class="img">
+                        <img src="static/image/nang_cap_vip.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gói Tuần</div>
+                        <div class="des">
+                            ...............
+                        </div>
+                        <div class="price">30000VND</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(2)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="3">
+                    <div class="img">
+                        <img src="static/image/nang_cap_vip.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gói tháng</div>
+                        <div class="des">
+                            ...............
+                        </div>
+                        <div class="price">110000VND</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(3)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="4">
+                    <div class="img">
+                        <img src="static/image/nang_cap_vip.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gói 3 tháng</div>
+                        <div class="des">
+                            ...............
+                        </div>
+                        <div class="price">300000VND</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(4)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="5">
+                    <div class="img">
+                        <img src="static/image/nang_cap_vip.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gói 6 tháng</div>
+                        <div class="des">
+                            ...............
+                        </div>
+                        <div class="price">550000VND</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(5)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
+                </div>
+
+                <div class="item" data-key="6">
+                    <div class="img">
+                        <img src="static/image/nang_cap_vip.jpg" alt="">
+                    </div>
+                    <div class="content">
+                        <div class="title">Gói năm</div>
+                        <div class="des">
+                            ...............
+                        </div>
+                        <div class="price">1100000VND</div>
+                        <input type="number" class="count" min="1" value="1">
+                        <button class="add">Add to cart</button>
+                        <button class="remove" onclick="Remove(6)"><i class="fa-solid fa-trash-can"></i></button>
+                    </div>
                 </div>
             </div>
+
+        </div>
+        <div class="cart" >
+            <form action="{% url 'web:nang_cap_vip' %}">
+                <div class="name">CART</div>
+                <div class="listCart">
+
+                </div>
+                <div class="submit" >
+                    <a><center><input type="submit" value="Mua"></center></a>
+                </div>
+            </form>
         </div>
     </div>
-</div>
+    <script src="static/js/nang_cap_vip.js"></script>
 </body>
 </html>

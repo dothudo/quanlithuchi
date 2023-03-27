@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+  }
+  .flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+body{
+    background-color: #fcd1d1;
+    font-family: system-ui;
+    width: 100%;
+    margin: 0;
+}
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+.meun{
+    margin-left: 5%;
+    margin-top: 10%;
+    width:90%;
+    height: 500px;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    row-gap: 5px;
+}
+.check{
+    width: 100%;
+    height: 100%;
+    background-color: #eabefe;
+    flex-wrap: wrap;
+    margin: auto;
+    padding-top: 0;
+}
+.check h1{
+    width: 100%;
+    height: 50px;
+}
+.check li{
+    width: calc(100% / 3);
+    height: calc(100% / 7);
+    text-align: center;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.1s;
+  }
+  .check :hover{
+    background: #12e72e;
+  }
+  .check li:hover{
+    border-radius: 0;
+    border: 0.5px solid rgb(0, 255, 4);
+    background: rgba(0,0,0,0.25);
+    cursor: pointer;
+  }
+/*màu nền khi 1 phần tử được chọn và màu chữ*/
+ul li.checked {
+    background: #f576a7;
+    color: #000000;
+  }
+
+div .noi-dung{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+div .noi-dung .form{
+    width: 50%;
+}
+div .noi-dung .form h2{
+    color: #607d8b;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ff4584;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+div .noi-dung .form .input-form{
+    margin-bottom: 20px;
+}
+div .noi-dung .form .input-form span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607db8;
+    letter-spacing: 1px;
+     }
+div .noi-dung .form .input-form input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+    }
+div .noi-dung .form .input-form input[type="submit"]{
+    background: #ff4584;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+               0 2px 2px rgba(0,0,0,0.12),
+               0 4px 4px rgba(0,0,0,0.12),
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+div .noi-dung .form .input-form input[type="submit"]:hover{
+    background: #f53677;
+}
